@@ -1,0 +1,16 @@
+class Padre:
+  def __init__(self, mensaje): #Constructor, crea un unico atributo para ser heredado
+    self.mensaje = mensaje
+class Hija(Padre):
+  def __init__(self, mensaje, nombre):
+      super().__init__(mensaje) #Aqui llamo al atributo que esta en Padre
+      self.nombre = nombre
+def main():
+  objepadre = Padre("Este es el mensaje del padre")
+  print(objepadre.mensaje)
+  objhija = Hija("Este es el mensaje de la hija", "Noemi")
+  print(objhija.mensaje)
+  print(objhija.nombre)
+
+if __name__ == "__main__":
+  main()
